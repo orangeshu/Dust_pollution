@@ -33,10 +33,10 @@ db.close()
 #mysql>shou databases;  #展示当前已经建立的数据库
 #mysql>create database one; #建立一个叫one的数据库
 #mysql>use one;  #进入one数据库
-#mysql>create table data(id int(4) auto_increment primary key not null,nongdu float(4,2) not null,created_time datetime not null);  #建立一个叫data的表，表中第一列为id，id自动更新；第二列为nongdu，四位数，小数点后两位；第三列为created_time.
+#mysql>create table data(id int(4) auto_increment primary key not null,nongdu float(4,2) not null,created_time datetime not null);  #建立一个叫data的表，表中第一列为id，id自动更新，最多四位；第二列为nongdu，四位数，小数点后两位；第三列为created_time.
 #mysql>show tables;  #展示当前已经建立的表单
 #mysql>describe data;  #查看表单的内容
-#mysql>insert into data values(0,48.97,'2018-05-19 17:00:00');  #向数据库中插入数据
+#mysql>insert into data value(0,48.97,'2018-05-19 17:00:00');  #向数据库中插入数据
 #mysql>select * from data; #检查数据是否插入成功
 #mysql>drop table data;  #删除叫data的表单
 
