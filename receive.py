@@ -11,7 +11,7 @@ import MySQLdb
 
 host = '0.0.0.0'
 
-data_payload = 2048
+data_payload = 2048 #一次性接收或者发送的字节数
 
 backlog = 5 #控制连接的个数，出现第6个请求就会拒绝
 
@@ -42,7 +42,7 @@ def echo_server(port):
 
     client, address = sock.accept() #接收连接
 
-    data = client.recv(data_payload)
+    data = client.recv(data_payload) 
 
     if data:
 
