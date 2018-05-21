@@ -13,7 +13,7 @@ host = '0.0.0.0'
 
 data_payload = 2048
 
-backlog = 5
+backlog = 5 #控制连接的个数，出现第6个请求就会拒绝
 
 ack = '23.24'
 
@@ -22,7 +22,8 @@ ack = '23.24'
 def echo_server(port):
 
     sock = socket.socket(socket.AF_INET, socket. SOCK_STREAM)
-
+    #Address Family:可以选择AF_INET（用于internet进程间通信）或者AF_UNIX（用于同一台机器进程间通信）
+    #Type:套接字类型，可以是SOCKET_STREAM（流式套接字，主要用于TCP协议）或者SOCKET_DGRAM（数据报套接字，主要用于UDP协议）
 
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
@@ -30,16 +31,16 @@ def echo_server(port):
 
     print "Starting up echo server on %s port %s" % server_address
 
-    sock.bind(server_address)
+    sock.bind(server_address) #绑定到特定的地址以及端口上
 
-    sock.listen(backlog)
+    sock.listen(backlog) #监听连接
 
 
 
 
     print 'Waiting to receiving message from client'
 
-    client, address = sock.accept()
+    client, address = sock.accept() #接收连接
 
     data = client.recv(data_payload)
 
