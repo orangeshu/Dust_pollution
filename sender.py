@@ -1,4 +1,13 @@
 #客户端
+
+'''
+1.创建socket
+2.连接到远程服务器
+3.发送数据
+4.接收数据
+5.关闭socket
+
+'''
 import socket
 
 import argparse
