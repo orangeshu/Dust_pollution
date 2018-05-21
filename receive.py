@@ -1,4 +1,12 @@
 #服务器端
+'''
+1.打开socket
+2.绑定到特定的地址以及端口上
+3.监听连接
+4.建立连接
+5接收/发送数据
+
+'''
 import socket
 
 import argparse
