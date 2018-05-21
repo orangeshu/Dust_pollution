@@ -34,7 +34,7 @@ def echo_client(port):
 
         print 'Sending: %s' % message
 
-        sock.sendall(message)
+        sock.sendall(message) #发送数据
 
         amount_received = 0
 
