@@ -25,7 +25,7 @@ def echo_server(port):
     #Address Family:可以选择AF_INET（用于internet进程间通信）或者AF_UNIX（用于同一台机器进程间通信）
     #Type:套接字类型，可以是SOCKET_STREAM（流式套接字，主要用于TCP协议）或者SOCKET_DGRAM（数据报套接字，主要用于UDP协议）
 
-    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) #端口复用
 
     server_address = (host, port)
 
